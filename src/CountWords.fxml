@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox fx:controller="CountWords" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CountWords">
    <children>
-      <Label text="Wpisz tekst" />
-      <TextArea prefHeight="243.0" prefWidth="600.0" />
+      <Label text="Wpisz tekst">
+         <padding>
+            <Insets bottom="30.0" />
+         </padding></Label>
+      <TextArea fx:id="textArea" prefHeight="194.0" prefWidth="600.0" />
       <HBox alignment="CENTER" prefHeight="36.0" prefWidth="600.0" spacing="20.0">
          <children>
-            <CheckBox mnemonicParsing="false" text="CheckBox" />
-            <CheckBox mnemonicParsing="false" text="CheckBox" />
-            <CheckBox mnemonicParsing="false" text="CheckBox" />
+            <CheckBox fx:id="checkBoxLiczWyrazy" mnemonicParsing="false" onAction="#checkBoxLiczWyrazyAction" text="Licz wyrazy" />
+            <CheckBox fx:id="checkBoxLiczZnaki" mnemonicParsing="false" onAction="#checkBoxLiczZnakiAction" text="Licz znaki" />
+            <CheckBox fx:id="checkBoxLiczBezSpacji" mnemonicParsing="false" text="Bez spacji" />
          </children>
       </HBox>
+      <Button mnemonicParsing="false" onAction="#Oblicz" text="Oblicz">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
    </children>
 </VBox>
