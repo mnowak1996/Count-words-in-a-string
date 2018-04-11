@@ -21,22 +21,32 @@ public class CountWords {
         checkBoxLiczBezSpacji.setDisable(true);
     }
 
-    private boolean l1=false;
+    private boolean checkBoxLiczWyrazyBoolean=false;
+    private boolean checkBoxLiczZnakiBoolean=false;
     @FXML
     private void checkBoxLiczWyrazyAction(){
-        if(l1==false) {
+        if(checkBoxLiczWyrazyBoolean==false) {
             checkBoxLiczZnaki.setDisable(true);
-            l1=true;
+            checkBoxLiczWyrazyBoolean=true;
         }
         else {
             checkBoxLiczZnaki.setDisable(false);
-            l1=false;
+            checkBoxLiczWyrazyBoolean=false;
         }
     }
     @FXML
     private void checkBoxLiczZnakiAction(){
-        checkBoxLiczWyrazy.setDisable(true);
-        checkBoxLiczBezSpacji.setDisable(false);
+        if(checkBoxLiczZnakiBoolean==false) {
+            checkBoxLiczWyrazy.setDisable(true);
+            checkBoxLiczBezSpacji.setDisable(false);
+            checkBoxLiczZnakiBoolean=true;
+        }
+        else {
+            checkBoxLiczWyrazy.setDisable(false);
+            checkBoxLiczBezSpacji.setSelected(false);
+            checkBoxLiczBezSpacji.setDisable(true);
+            checkBoxLiczZnakiBoolean=false;
+        }
     }
 
 
