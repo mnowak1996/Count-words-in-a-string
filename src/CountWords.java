@@ -57,12 +57,9 @@ public class CountWords {
     @FXML
     private void Oblicz(){
         if(checkBoxLiczWyrazy.isSelected()){
-            checkBoxLiczZnaki.setDisable(true);
-//            LiczWyrazy();
+
         }
-        else {
-            checkBoxLiczZnaki.setDisable(false);
-        }
+
 
 
     }
