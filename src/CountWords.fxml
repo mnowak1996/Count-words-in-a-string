@@ -14,7 +14,7 @@
          <padding>
             <Insets bottom="30.0" />
          </padding></Label>
-      <TextArea fx:id="textArea" prefHeight="194.0" prefWidth="600.0" />
+      <TextArea fx:id="textArea" prefHeight="168.0" prefWidth="600.0" />
       <HBox alignment="CENTER" prefHeight="36.0" prefWidth="600.0" spacing="20.0">
          <children>
             <CheckBox fx:id="checkBoxLiczWyrazy" mnemonicParsing="false" onAction="#checkBoxLiczWyrazyAction" text="Licz wyrazy" />
@@ -26,5 +26,10 @@
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin></Button>
+      <Label fx:id="Wynik" lineSpacing="15.0" text="Wynik">
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
    </children>
 </VBox>
